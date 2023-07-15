@@ -21,6 +21,17 @@ end
 #  it should have a thirsty attribute, that is true by default
 #  it should have a drink method. When called, the thirsty attribute changes to false
 
+class Vampire
+    attr_reader :name, :pet, :thirsty
+    def initialize(name, pet = "bat")
+        @name = name
+        @pet = pet
+        @thirsty = true
+    end
+    def drink
+        @thirsty = false
+    end
+end
 
 #  Write a Dragon class
 #  it should have a dynamic name attribute (string)
