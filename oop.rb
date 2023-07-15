@@ -40,6 +40,24 @@ end
 #  it should have a is_hungry attribute that is true by default
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
 
+class Dragon
+    attr_reader :name, :rider, :color, :is_hungry
+    def initialize(name, rider, color)
+        @name = name.to_s
+        @rider = rider.to_s
+        @color = color.to_s
+        @is_hungry = true
+        @times_eaten = 0
+    end
+    
+    def eat
+        @times_eaten = @times_eaten + 1
+        if @times_eaten > 3
+            @is_hungry = false
+        end
+    end
+end
+
 
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
