@@ -4,6 +4,7 @@
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 
 class Unicorn
+    attr_reader :name, :color
     def initialize(name)
         @name = name
         @color = "silver"
@@ -41,7 +42,7 @@ end
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
 
 class Dragon
-    attr_reader :name, :rider, :color, :is_hungry
+    attr_reader :name, :rider, :color, :is_hungry, :times_eaten
     def initialize(name, rider, color)
         @name = name.to_s
         @rider = rider.to_s
